@@ -2,53 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NJCfilmworks – Nicholas Ceglia</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <script defer>
-    // Simple dark mode toggle
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-    }
-  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NJC Filmworks</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="hero">
+    <img src="img/logo.png" alt="Logo" class="logo" />
     <h1>Nicholas Ceglia</h1>
     <p>Videographer | Cinematographer</p>
-    <a href="#portfolio" class="btn">View Portfolio</a>
-    <button class="dark-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <a href="#portfolio" class="btn">View Portfolio</a><br />
+    <button onclick="toggleDarkMode()" class="dark-toggle">Toggle Dark Mode</button>
   </header>
 
-  <section id="portfolio" class="section">
+  <section class="section" id="portfolio">
     <h2>My Work</h2>
     <div class="video-grid">
       <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-      <iframe src="https://player.vimeo.com/video/123456789" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="image-gallery">
-      <a href="img/work1.jpg" target="_blank"><img src="img/work1_thumb.jpg" alt="Work 1"></a>
-      <a href="img/work2.jpg" target="_blank"><img src="img/work2_thumb.jpg" alt="Work 2"></a>
+      <iframe src="https://player.vimeo.com/video/000000000" frameborder="0" allowfullscreen></iframe>
     </div>
   </section>
 
-  <section id="about" class="section">
+  <section class="section">
     <h2>About Me</h2>
-    <p>Hello! I'm Nicholas Ceglia, a passionate videographer and cinematographer from Gainesville Florida. I specialize in storytelling and visual impact, and I’m a proud Full Sail alumni. I’ve worked on weddings, commercials, short films, and more. My mission is to bring my clients stories and dreams to life.</p>
+    <div class="about-section">
+      <img src="img/headshot.jpg" alt="Headshot" class="headshot" />
+      <p>
+        Hello! I'm Nicholas Ceglia, a passionate videographer and cinematographer from New Jersey. I specialize in storytelling and visual impact, and I'm a proud Full Sail graduate. I've worked on weddings, commercials, short films, and more. My mission is to bring stories to life with clarity and emotion.
+      </p>
+    </div>
   </section>
 
-  <section id="contact" class="section">
+  <section class="section">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:njcfilmworks@gmail.com">njcfilmworks@gmail.com</a></p>
   </section>
 
-  <section id="subscribe" class="section">
+  <section class="section">
     <h2>Subscribe</h2>
-    <form action="#" method="post">
-      <input type="email" name="email" placeholder="Your email" required>
+    <form>
+      <input type="email" placeholder="Your email" required />
       <button type="submit">Subscribe Now</button>
     </form>
   </section>
@@ -56,5 +49,11 @@
   <footer>
     <p>© 2025 Nicholas Ceglia. All rights reserved.</p>
   </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
 </body>
 </html>
