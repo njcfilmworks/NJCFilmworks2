@@ -1,5 +1,15 @@
 /* styles.css */
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #111;
+    --text-color: #eee;
+    --link-color: #6cc3e0;
+    --btn-color: #444;
+    --btn-text: #eee;
+  }
+}
+
 :root {
   --accent-color: #2c8fbd;
   --background-color: #ffffff;
@@ -17,19 +27,21 @@ body {
   line-height: 1.6;
 }
 
-body.dark-mode {
-  --background-color: #111;
-  --text-color: #eee;
-  --link-color: #6cc3e0;
-  --btn-color: #444;
-  --btn-text: #eee;
-}
-
 .logo {
   position: absolute;
   top: 1rem;
   left: 1rem;
-  height: 50px;
+  max-width: 100px;
+  height: auto;
+  width: 20vw;
+  object-fit: contain;
+  z-index: 10;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    width: 30vw;
+  }
 }
 
 header.hero {
@@ -64,16 +76,6 @@ header.hero p {
   background-color: #1a6b8a;
 }
 
-.dark-toggle {
-  margin-top: 1rem;
-  background: none;
-  border: 2px solid var(--btn-text);
-  color: var(--btn-text);
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border-radius: 6px;
-}
-
 .section {
   padding: 4rem 2rem;
   max-width: 960px;
@@ -91,6 +93,8 @@ header.hero p {
   max-width: 200px;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  width: 100%;
+  height: auto;
 }
 
 h2 {
@@ -165,9 +169,11 @@ footer {
   color: #888;
 }
 
-body.dark-mode footer {
-  background-color: #1a1a1a;
-  color: #aaa;
+@media (prefers-color-scheme: dark) {
+  footer {
+    background-color: #1a1a1a;
+    color: #aaa;
+  }
 }
 
 a {
