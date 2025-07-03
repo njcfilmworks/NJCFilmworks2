@@ -39,14 +39,16 @@ body {
   left: 1rem;
   max-width: 100px;
   height: auto;
-  width: 20vw;
+  width: auto;
+  max-height: 60px;
   object-fit: contain;
   z-index: 10;
 }
 
 @media (max-width: 600px) {
   .logo {
-    width: 30vw;
+    max-width: 70px;
+    max-height: 50px;
   }
 }
 
