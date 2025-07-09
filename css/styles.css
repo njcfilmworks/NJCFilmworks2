@@ -1,4 +1,6 @@
-/* Theme Variables */
+/* ===================
+   DARK MODE STYLES
+   =================== */
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #111;
@@ -8,12 +10,20 @@
     --btn-text: #eee;
   }
 
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+
   footer {
     background-color: #1a1a1a;
     color: #aaa;
   }
 }
 
+/* ===================
+   LIGHT MODE DEFAULTS
+   =================== */
 :root {
   --accent-color: #2c8fbd;
   --background-color: #ffffff;
@@ -23,35 +33,42 @@
   --btn-text: #ffffff;
 }
 
-/* Global Styles */
 body {
   margin: 0;
+  font-family: 'Playfair Display', serif;
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: 'Playfair Display', serif;
   line-height: 1.6;
 }
 
-/* Logo */
 .logo {
-  display: block;
-  margin: 1rem auto;
-  width: 200px;
-  max-width: 50vw;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  max-width: 150px;
   height: auto;
+  width: clamp(120px, 15vw, 180px);
+  object-fit: contain;
+  z-index: 10;
 }
 
-/* Header */
+@media (max-width: 600px) {
+  .logo {
+    width: 35vw;
+  }
+}
+
 header.hero {
   text-align: center;
   padding: 4rem 2rem;
   background-color: var(--accent-color);
   color: #fff;
+  position: relative;
 }
 
 header.hero h1 {
   font-size: 3rem;
-  margin: 0.5rem 0;
+  margin-bottom: 0.5rem;
 }
 
 header.hero p {
@@ -59,24 +76,16 @@ header.hero p {
   margin-bottom: 1rem;
 }
 
-/* Section Layout */
 .section {
   padding: 4rem 2rem;
   max-width: 960px;
   margin: 0 auto;
 }
 
-h2 {
-  font-size: 2rem;
-  color: var(--accent-color);
-  margin-bottom: 1rem;
-}
-
-/* About Me Section */
 .about-section {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   gap: 2rem;
 }
 
@@ -88,7 +97,12 @@ h2 {
   height: auto;
 }
 
-/* Video Grid */
+h2 {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
 .video-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -101,80 +115,6 @@ h2 {
   aspect-ratio: 16 / 9;
 }
 
-/* Image Gallery */
-.image-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.image-gallery img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
-  cursor: pointer;
-}
-
-.image-gallery img:hover {
-  transform: scale(1.03);
-}
-
-/* Subscribe Form */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-input[type="email"] {
-  padding: 0.75rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-button[type="submit"] {
-  background-color: var(--btn-color);
-  color: var(--btn-text);
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button[type="submit"]:hover {
-  background-color: #1a6b8a;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 2rem;
-  background-color: #f5f5f5;
-  color: #888;
-}
-
-@media (max-width: 600px) {
-  .logo {
-    width: 80vw;
-  }
-
-  .about-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-section img.headshot {
-    margin: 0 auto;
-  }
-}
-
-/* Links */
 a {
   color: var(--link-color);
   text-decoration: none;
@@ -182,4 +122,16 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f5f5f5;
+  color: #888;
+}
+
+/* Add transitions for theme switching */
+body, footer {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
