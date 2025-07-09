@@ -3,16 +3,22 @@
    =================== */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #111;
-    --text-color: #eee;
-    --link-color: #6cc3e0;
+    --background-color: #0d0d0d;
+    --text-color: #f0f0f0;
+    --link-color: #71c7ec;
     --btn-color: #444;
     --btn-text: #eee;
+    --accent-color: #1786b2;
   }
 
   body {
     background-color: var(--background-color);
     color: var(--text-color);
+  }
+
+  header.hero {
+    background-color: var(--accent-color);
+    color: #fff;
   }
 
   footer {
@@ -50,6 +56,9 @@ body {
   width: clamp(120px, 15vw, 180px);
   object-fit: contain;
   z-index: 10;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0.25rem;
+  border-radius: 8px;
 }
 
 @media (max-width: 600px) {
