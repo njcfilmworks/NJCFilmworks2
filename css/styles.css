@@ -35,10 +35,12 @@ header.hero {
   top: 1.5rem;
   left: 1.5rem;
   max-width: 140px;
-  border-radius: 12px;
-  background-color: #fff;
-  padding: 0.5rem;
-  box-shadow: var(--shadow);
+  height: auto;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  z-index: 10;
+  filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.4));
 }
 
 .section {
@@ -112,7 +114,8 @@ a:hover {
   }
 
   .logo {
-    background-color: #2c3e50;
+    background-color: none;
+    filter: drop-shadow(1px 1px 6px rgba(255, 255, 255, 0.3));
   }
 
   footer {
