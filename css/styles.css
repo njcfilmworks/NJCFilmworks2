@@ -47,6 +47,17 @@ header.hero {
   display: block;
 }
 
+.tagline {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  margin-top: 1rem;
+  color: var(--header-text-color);
+  font-family: 'Crimson Text', serif;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 .section {
   background: var(--card-background);
   backdrop-filter: blur(6px);
