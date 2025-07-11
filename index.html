@@ -7,7 +7,73 @@
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #f8f9fc, #e0f2f7);
+      font-family: 'Inter', sans-serif;
+      color: #2a2a2a;
+    }
+    header.hero {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      position: relative;
+    }
+    .logo {
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+      max-width: 160px;
+      filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.6));
+    }
+    .section {
+      background: #ffffffcc;
+      backdrop-filter: blur(5px);
+      border-radius: 16px;
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #1a3d5d;
+      margin-bottom: 1rem;
+      border-left: 6px solid #1a3d5d;
+      padding-left: 1rem;
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+    .about-section img.headshot {
+      max-width: 220px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    footer {
+      background: #1a3d5d;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+    a {
+      color: #1a3d5d;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <header class="hero">
@@ -39,14 +105,13 @@
     <div>
       <h2>About Me</h2>
       <p>
-        I am a creative filmmaker based in Gainesville, specializing in weddings, commercials, and passion-driven storytelling. As a proud Full Sail Alumni, I strive to make your special day/ ideas, ones to remember and cherish for a lifetime.
-      </p>
+I am a creative filmmaker based in Gainesville, specializing in weddings, commercials, and passion-driven storytelling. As a proud Full Sail Alumni, I strive to make your special day/ ideas, ones to remember and cherish for a lifetime.      </p>
     </div>
   </section>
 
   <section class="section">
     <h2>Contact Me</h2>
-    <p>For pricing and consultation feel free to reach out either via text or email. Wedding pricing starts at $1250 but prices vary based on location and other factors.</p>
+    <p>For pricing and consultation feel free to reach out either via text/call or email. Wedding pricing starts at $1250 but prices vary based on location and other factors.</p>
     <p>Email: <a href="mailto:njcfilmworks@gmail.com">njcfilmworks@gmail.com</a></p>
     <p>Phone: <a href="tel:+13527578690">(352) 757-8690</a></p>
   </section>
