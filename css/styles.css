@@ -8,33 +8,177 @@ margin:0;
 background:var(--bg);
 color:white;
 font-family:'Inter', sans-serif;
-overflow-x:hidden;
 }
 
-h1,h2,h3{
-font-family:'Playfair Display', serif;
-}
-
+/* NAV */
 .nav{
 position:fixed;
 width:100%;
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:20px 60px;
 background:rgba(0,0,0,.5);
-backdrop-filter:blur(8px);
+backdrop-filter:blur(10px);
 z-index:100;
 }
 
-.nav a{
-color:white;
-margin-left:20px;
+.nav-links a{
+margin-left:25px;
 text-decoration:none;
+color:white;
 }
 
 .nav-btn{
 border:1px solid var(--gold);
 padding:10px 20px;
+border-radius:30px;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.hero-video iframe{
+position:absolute;
+top:50%;
+left:50%;
+width:177.77vh;
+height:100vh;
+transform:translate(-50%,-50%);
+pointer-events:none;
+}
+
+.hero-overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:
+linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.85)),
+radial-gradient(circle at 70% 30%, rgba(200,169,126,.25), transparent 60%);
+}
+
+.hero-content{
+z-index:2;
+max-width:800px;
+}
+
+h1{
+font-family:'Playfair Display', serif;
+font-size:64px;
+}
+
+.sub{
+margin-top:10px;
+}
+
+.location{
+opacity:.7;
+margin-bottom:30px;
+}
+
+/* BUTTONS */
+.btn{
+background:var(--gold);
+color:#111;
+padding:14px 30px;
+border-radius:30px;
+text-decoration:none;
+}
+
+.btn-outline{
+border:1px solid var(--gold);
+color:var(--gold);
+padding:14px 30px;
+border-radius:30px;
+margin-left:10px;
+text-decoration:none;
+}
+
+/* FEATURED */
+.featured{
+padding:120px 10%;
+text-align:center;
+}
+
+.film-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.film-card{
+position:relative;
+overflow:hidden;
+cursor:pointer;
+}
+
+.film-card img{
+width:100%;
+transition:.6s;
+}
+
+.film-card:hover img{
+transform:scale(1.1);
+}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:linear-gradient(transparent, rgba(0,0,0,.8));
+}
+
+.play{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:40px;
+}
+
+.film-info{
+position:absolute;
+bottom:20px;
+left:20px;
+}
+
+/* TESTIMONIAL */
+.testimonial{
+padding:120px 20px;
+text-align:center;
+background:#181818;
+}
+
+.quote{
+font-size:22px;
+max-width:700px;
+margin:auto;
+}
+
+/* CTA */
+.cta{
+padding:120px 20px;
+text-align:center;
+}
+
+/* ANIMATION */
+.fade-up{
+opacity:0;
+transform:translateY(40px);
+transition:.8s ease;
+}
+
+.fade-up.active{
+opacity:1;
+transform:translateY(0);
+}padding:10px 20px;
 border-radius:30px;
 }
 
